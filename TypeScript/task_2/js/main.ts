@@ -63,12 +63,12 @@ class Director implements DirectorInterface {
     return 'Working from home';
   }
 
-  getCoffeeBreak():string {
-   return 'Getting a coffee break' 
+  getCoffeeBreak(): string {
+    return 'Getting a coffee break';
   }
 
-  workDirectorTasks():string {
-    return 'Getting to director tasks'
+  workDirectorTasks(): string {
+    return 'Getting to director tasks';
   }
 }
 
@@ -86,7 +86,6 @@ class Teacher implements TeacherInterface {
   }
 }
 
-
 const createEmployee = (salary: number | string): Director | Teacher => {
   if (typeof salary === 'number' && salary < 500) {
     return new Teacher();
@@ -94,4 +93,3 @@ const createEmployee = (salary: number | string): Director | Teacher => {
 
   return new Director();
 };
-}
